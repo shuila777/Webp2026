@@ -1,0 +1,53 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12068
+"GET / HTTP/1.1" 200 12068
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12068
+"GET / HTTP/1.1" 200 12068
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+C:\Users\user\Desktop\hello_django\hello_django\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+C:\Users\user\Desktop\hello_django\myhello\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\user\Desktop\hello_django\hello_django\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\user\Desktop\hello_django\hello_django\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\user\Desktop\hello_django\myhello\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+Watching for file changes with StatReloader
+Internal Server Error: /myhello/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\py3.13\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\hello_django\myhello\views.py", line 6, in myIndex
+    my_name = request.Post.get('name',"CGU")
+              ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'Post'. Did you mean: 'POST'?
+"GET /myhello/ HTTP/1.1" 500 63888
+C:\Users\user\Desktop\hello_django\myhello\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /myhello/ HTTP/1.1" 200 8
+"GET /myhello/ HTTP/1.1" 200 8
+"GET /myhello/?name=cj HTTP/1.1" 200 8
+C:\Users\user\Desktop\hello_django\myhello\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /myhello/ HTTP/1.1" 200 8
+"GET /myhello/?name=cj HTTP/1.1" 200 7
+C:\Users\user\Desktop\hello_django\myhello\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /myhello/ HTTP/1.1" 200 9
+"GET /myhello/?name=cj HTTP/1.1" 200 8
