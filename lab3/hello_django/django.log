@@ -1,0 +1,151 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12068
+"GET / HTTP/1.1" 200 12068
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12068
+"GET / HTTP/1.1" 200 12068
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+C:\Users\user\Desktop\hello_django\hello_django\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+C:\Users\user\Desktop\hello_django\myhello\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\user\Desktop\hello_django\hello_django\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\user\Desktop\hello_django\hello_django\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\user\Desktop\hello_django\myhello\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+Watching for file changes with StatReloader
+Internal Server Error: /myhello/
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\py3.13\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Desktop\py3.13\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Desktop\hello_django\myhello\views.py", line 6, in myIndex
+    my_name = request.Post.get('name',"CGU")
+              ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'Post'. Did you mean: 'POST'?
+"GET /myhello/ HTTP/1.1" 500 63888
+C:\Users\user\Desktop\hello_django\myhello\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /myhello/ HTTP/1.1" 200 8
+"GET /myhello/ HTTP/1.1" 200 8
+"GET /myhello/?name=cj HTTP/1.1" 200 8
+C:\Users\user\Desktop\hello_django\myhello\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /myhello/ HTTP/1.1" 200 8
+"GET /myhello/?name=cj HTTP/1.1" 200 7
+C:\Users\user\Desktop\hello_django\myhello\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /myhello/ HTTP/1.1" 200 9
+"GET /myhello/?name=cj HTTP/1.1" 200 8
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2314
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2365
+"GET /myhello/?name=cj HTTP/1.1" 200 5204
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+Bad Request: /myhello/
+"GET /myhello/ HTTP/1.1" 400 5181
+INFO 2026-03-11 15:29:05,659 autoreload Watching for file changes with StatReloader
+INFO 2026-03-11 15:29:16,133 autoreload Watching for file changes with StatReloader
+INFO 2026-03-11 15:30:22,491 autoreload Watching for file changes with StatReloader
+INFO 2026-03-11 15:30:48,522 log "GET /myhello/?name=cj HTTP/1.1" 200 5204
+INFO 2026-03-11 15:30:48,831 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-03-11 15:30:48,835 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-03-11 15:30:48,837 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-03-11 15:30:48,840 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-03-11 15:30:48,842 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-03-11 15:30:48,861 log "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-03-11 15:30:48,871 log "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-03-11 15:30:48,886 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-03-11 15:30:48,891 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-03-11 15:30:48,921 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-03-11 15:30:48,932 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-03-11 15:30:48,999 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+WARNING 2026-03-11 15:30:54,168 log Bad Request: /myhello/
+WARNING 2026-03-11 15:30:54,169 log "GET /myhello/ HTTP/1.1" 400 5181
+INFO 2026-03-11 15:30:54,203 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,204 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,205 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,205 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,207 log "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,207 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,212 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,214 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,214 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,214 log "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:30:54,215 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:04,996 log "GET /myhello/?name=cj HTTP/1.1" 200 5204
+INFO 2026-03-11 15:31:05,023 log "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,024 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,028 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,030 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,030 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,033 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,033 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,036 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,037 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,037 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:05,037 log "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+WARNING 2026-03-11 15:31:31,398 log Bad Request: /myhello/
+WARNING 2026-03-11 15:31:31,399 log "GET /myhello/ HTTP/1.1" 400 5181
+INFO 2026-03-11 15:31:31,421 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,429 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,431 log "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,431 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,431 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,431 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,431 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,435 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,437 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,437 log "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:31:31,438 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-03-18 14:54:33,324 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-18 14:54:51,597 log Not Found: /
+WARNING 2026-03-18 14:54:51,599 log "GET / HTTP/1.1" 404 2314
+WARNING 2026-03-18 14:54:51,850 log Not Found: /favicon.ico
+WARNING 2026-03-18 14:54:51,851 log "GET /favicon.ico HTTP/1.1" 404 2365
+INFO 2026-03-18 14:56:00,418 log "GET /myhello/add?title=123456 HTTP/1.1" 200 5240
+INFO 2026-03-18 14:56:00,782 log "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-03-18 14:56:00,784 log "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-03-18 14:56:00,788 log "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-03-18 14:56:00,794 log "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-03-18 14:56:00,819 log "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-03-18 14:56:00,829 log "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-03-18 14:56:00,829 log "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-03-18 14:56:00,835 log "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-03-18 14:56:00,843 log "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-03-18 14:56:00,853 log "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-03-18 14:56:00,879 log "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-03-18 14:56:00,918 log "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-03-18 14:56:10,717 log "GET /myhello/list HTTP/1.1" 200 116
+INFO 2026-03-18 15:11:34,518 autoreload Watching for file changes with StatReloader
+INFO 2026-03-18 15:11:50,470 log "GET /myhello/add?title=123456 HTTP/1.1" 200 5240
+WARNING 2026-03-18 15:11:50,604 log Not Found: /favicon.ico
+WARNING 2026-03-18 15:11:50,606 log "GET /favicon.ico HTTP/1.1" 404 2365
+INFO 2026-03-18 15:12:01,440 log "GET /myhello/list HTTP/1.1" 200 232
