@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>聖誕樹作業</title>
+</head>
+<body>
+    <h1>請開啟 Console 查看聖誕樹</h1>
+    <script>
+        // 1. 重複字元的輔助函式
+        function repeatchar(count, arg_char) {
+            let result = "";
+            for (let i = 0; i < count; i++) {
+                result += arg_char;
+            }
+            return result;
+        }
+
+        // 2. 印出樹冠
+        function printTreeTop(n) {
+            for (let i = 1; i <= n; i++) {
+                // 空格數規律: n-i, 星號數規律: 2*i - 1
+                let space = repeatchar(n - i, ' ');
+                let stars = repeatchar(2 * i - 1, '*');
+                console.log(space + stars);
+            }
+        }
+
+        // 3. 印出樹幹 (固定三層)
+        function printTreeBottom(n) {
+            for (let i = 0; i < 3; i++) {
+                // 樹幹對齊最頂端的空格數: n-1
+                let space = repeatchar(n - 1, ' ');
+                console.log(space + '*');
+            }
+        }
+
+        // 4. 主函式
+        function tree(n) {
+            printTreeTop(n);
+            printTreeBottom(n);
+        }
+
+        // 執行，畫出 4 層高的聖誕樹
+        tree(4);
+    </script>
+</body>
+</html>
