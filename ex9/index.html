@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab#9 Flickr Photo Wall</title>
+    <style>
+        /* 這裡放原本 style.css 的內容 */
+        .gallery {
+            --g: 6px; /* 圖片間距 */
+            display: grid;
+            width: 1200px; /* 整體寬度 */
+            aspect-ratio: 1;
+            grid: auto-flow 1fr / repeat(3, 1fr);
+            gap: var(--g);
+            margin: 20px auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* 根據投影片 Page 17 的特殊形狀切片設定 */
+        .gallery img:nth-child(2) {
+            grid-area: 1 / 2 / span 2 / span 2;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, calc(50% + var(--g)/4) 100%, 0 calc(50% - var(--g)/4));
+        }
+
+        .gallery img:nth-child(3) {
+            grid-area: 2 / 1 / span 2 / span 2;
+            clip-path: polygon(0 0, calc(50% - var(--g)/4) 0, 100% calc(50% + var(--g)/4), 100% 100%, 0 100%);
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="getimg()">Get IMG</button>
+
+    <div id="gallery" class="gallery"></div>
+
+    <script>
+        /* 這裡放原本 script.js 的內容 (Flickr API 邏輯) */
+        var imglist_Url = 'https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=ca370d51a054836007519a00ff4ce59e&per_page=10&format=json&nojsoncallback=1';
+
+        function getimg() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', imglist_Url, true);
+            xhr.send();
+
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 400) {
+                    var data = JSON.parse(this.responseText);
+                    add_new_img(data);
+                } else {
+                    console.error("API 請求失敗");
+                }
+            };
+        }
+
+        function add_new_img(dataset) {
+            var gallery = document.getElementById('gallery');
+            gallery.innerHTML = ""; // 清空舊圖
+
+            var photos = dataset.photos.photo;
+
+            photos.forEach(function(item) {
+                // 拼接 Flickr 圖片網址 (b 代表大尺寸)
+                var imgUrl = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`;
+                
+                var imgElement = document.createElement('img');
+                imgElement.src = imgUrl;
+                imgElement.alt = item.title;
+                
+                gallery.appendChild(imgElement);
+            });
+        }
+    </script>
+</body>
+</html>
