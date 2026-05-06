@@ -1,0 +1,14 @@
+/* src/index.css */
+body {
+  margin: 0;
+  background-color: #282c34; /* 深色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* src/App.css */
+.App {
+  text-align: center;
+}
