@@ -1,0 +1,280 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --noir: #111A19;
+  --emerald: #284139;
+  --wasabi: #809078;
+  --khaki: #F8D794;
+  --tan: #D5B893;
+  --coffee: #6F4D38;
+  --earth: #B86B30;
+  --caput: #632024;
+  --slate: #617891;
+  --paper: #F6E7BD;
+  --ink: #080B0A;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Courier New", Consolas, "Microsoft JhengHei", monospace;
+  background: var(--noir);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content:
+    "01010101 01011010 01000011 01001000 01000101 01010011 01010011 :: REACT_GAME :: READY\A"
+    ">>> tic_tac_toe_state_scan >>> class_component_render >>> winner_check\A"
+    "X O X O X O  HISTORY_BUFFER  JUMP_TO_STEP  STATE_SYNC  101010\A"
+    "[CLICK] [RENDER] [SETSTATE] [WIN_CHECK] [NEXT_PLAYER]\A"
+    "################################################################################";
+  white-space: pre;
+  position: fixed;
+  inset: -40px -80px auto -80px;
+  height: 130vh;
+  z-index: 0;
+  pointer-events: none;
+  color: rgba(128,144,120,0.065);
+  font-size: clamp(14px, 1.4vw, 26px);
+  font-weight: 900;
+  line-height: 1.7;
+  transform: rotate(-2deg) scale(1.15);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(960px, 100%);
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  box-shadow: 14px 14px 0 rgba(0,0,0,0.96);
+  padding: 28px;
+}
+
+.container::before {
+  content: "EX13::REACT_OX_GAME";
+  position: absolute;
+  left: 20px;
+  top: -18px;
+  background: var(--earth);
+  color: var(--khaki);
+  border: 3px solid var(--ink);
+  padding: 6px 14px;
+  font-weight: 900;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.hero {
+  text-align: center;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  box-shadow: 9px 9px 0 var(--ink);
+  padding: 38px 20px 30px;
+  margin-bottom: 32px;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  gap: 8px;
+  filter: drop-shadow(5px 5px 0 rgba(8,11,10,0.7));
+}
+
+.brand-lockup span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  height: 78px;
+  border: 3px solid var(--ink);
+  font-size: 3.8rem;
+  font-weight: 900;
+  box-shadow: 4px 4px 0 rgba(8,11,10,0.65);
+}
+
+.brand-lockup span:nth-child(1) {
+  background: var(--earth);
+  color: var(--khaki);
+  transform: rotate(-5deg);
+}
+
+.brand-lockup span:nth-child(2) {
+  background: var(--slate);
+  color: var(--paper);
+  transform: rotate(3deg) translateY(-5px);
+}
+
+.brand-lockup span:nth-child(3) {
+  background: var(--caput);
+  color: var(--khaki);
+  transform: rotate(-2deg) translateY(5px);
+}
+
+.brand-lockup span:nth-child(4) {
+  background: var(--wasabi);
+  color: var(--noir);
+  transform: rotate(4deg);
+}
+
+.brand-lockup span:nth-child(5) {
+  background: var(--tan);
+  color: var(--caput);
+  transform: rotate(-4deg) translateY(4px);
+}
+
+.brand-lockup span:nth-child(6) {
+  background: var(--emerald);
+  color: var(--khaki);
+  transform: rotate(2deg) translateY(-6px);
+}
+
+.subtitle {
+  margin-top: 18px;
+  color: var(--caput);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.tech-tag {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--emerald);
+  color: var(--khaki);
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 34px;
+}
+
+.folder-card {
+  position: relative;
+  background: #E7C98F;
+  border: 4px solid var(--ink);
+  box-shadow: 9px 9px 0 var(--ink);
+  padding: 34px 24px 24px;
+}
+
+.folder-card::before {
+  content: attr(data-tab);
+  position: absolute;
+  top: -4px;
+  left: 20px;
+  transform: translateY(-100%);
+  background: var(--earth);
+  color: var(--khaki);
+  border: 4px solid var(--ink);
+  border-bottom: none;
+  padding: 8px 18px;
+  font-weight: 900;
+}
+
+.board-row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  float: left;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 90px;
+  height: 90px;
+  width: 90px;
+  margin-right: -3px;
+  margin-top: -3px;
+  padding: 0;
+  text-align: center;
+  color: var(--caput);
+  cursor: pointer;
+  font-family: Impact, "Courier New", sans-serif;
+}
+
+.square:hover {
+  background: var(--khaki);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.game-info {
+  min-width: 250px;
+  background: #D5B893;
+}
+
+.status {
+  background: var(--emerald);
+  color: var(--khaki);
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.move-btn {
+  cursor: pointer;
+  border: 3px solid var(--ink);
+  background: var(--earth);
+  color: var(--khaki);
+  box-shadow: 5px 5px 0 var(--ink);
+  padding: 7px 12px;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.move-btn:hover {
+  background: var(--emerald);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+@media (max-width: 760px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand-lockup span {
+    min-width: 42px;
+    height: 58px;
+    font-size: 2.6rem;
+  }
+
+  .square {
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    font-size: 38px;
+  }
+}
